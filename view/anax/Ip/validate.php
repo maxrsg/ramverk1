@@ -33,7 +33,7 @@ Hostname:  <?= $hostname ?? '""' ?></pre>
 
 <div class="api-wrap">
     <h2>JSON IP validator</h2>
-    <form method="POST" action="http://localhost:8080/dbwebb/ramverk1/me/redovisa/htdocs/ipApi">
+    <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/ipApi">
         <label>Input IP address:<br>
         <input type="text" name="ip"></label>
         <input type="submit" value="Validate">
@@ -42,7 +42,7 @@ Hostname:  <?= $hostname ?? '""' ?></pre>
 
 <div class="test-api-wrap">
     <h2>Test the API:</h2>
-    <form method="POST" action="http://localhost:8080/dbwebb/ramverk1/me/redovisa/htdocs/ipApi">
+    <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/ipApi">
         Valid ipv4:<input type="submit" value="127.0.0.1" name="ip"><br>
         Valid ipv6: <input type="submit" value="2001:0db8:85a3:0000:0000:8a2e:0370:7334" name="ip"><br>
         Invalid: <input type="submit" value="000000" name="ip">
@@ -65,7 +65,7 @@ Hostname:  <?= $hostname ?? '""' ?></pre>
     <pre class="hljs">
 {
     ip:         "127.0.0.1"
-    type: IPv4
+    type:       IPv4
     hostname:   localhost
 }</pre>
 </div>
