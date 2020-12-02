@@ -53,5 +53,10 @@ return [
             "url" => "ip",
             "title" => "Validera ip",
         ],
+        [
+            "text" => "IP-Geotagging",
+            "url" => "ipGeo",
+            "title" => "Geotagga IP-adress",
+        ],
     ],
 ];
