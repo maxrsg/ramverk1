@@ -32,18 +32,8 @@ class IpGeoController implements ContainerInjectableInterface
     }
 
 
-    public function indexActionGet()
+    public function indexAction()
     {
-        // $model = new GeoModel(ANAX_INSTALL_PATH."/config/api/ipstack.txt");
-        // $ip = $this->di->request->getPost('ip') ?? "";
-        // $yes = ANAX_INSTALL_PATH."/config/api/ipstack.txt";
-        // if($model->validateIp($ip)) {
-        //     $model->getDataFromApi($ip);
-        //     $res = $model->getData();
-        // } else {
-        //     $res = "Invalid IP";
-        // }
-
         $userIp = $this->di->request->getServer("REMOTE_ADDR");
 
         $data = [
@@ -72,10 +62,10 @@ class IpGeoController implements ContainerInjectableInterface
     public function indexActionPost()
     {
         $model = new GeoModel(ANAX_INSTALL_PATH."/config/api/ipstack.txt");
-        $ip = $this->di->request->getPost('ip') ?? "";
+        $ipAddr = $this->di->request->getPost('ip') ?? "";
 
-        if($model->validateIp($ip)) {
-            $model->getDataFromApi($ip);
+        if ($model->validateIp($ipAddr)) {
+            $model->getDataFromApi($ipAddr);
             $res = $model->getData();
         } else {
             $res = "Invalid IP";

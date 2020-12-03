@@ -34,7 +34,7 @@ Latitude:  <?= $result->latitude ?>
 
 Longitude: <?= $result->longitude ?>
     </pre>
-    <?php } else if (isset($result)) { 
+    <?php } else if (isset($result)) {
         echo $result;
     } else {?>
 Please enter IP above
@@ -44,8 +44,7 @@ Please enter IP above
 
 <div class="api-wrap">
     <h2>JSON IP validator</h2>
-    <!-- <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/geoApi"> -->
-    <form method="POST" action="http://localhost:8080/dbwebb/ramverk1/me/redovisa/htdocs/geoApi">
+    <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/geoApi">
         <label>Input IP address:<br>
         <input type="text" name="ip" value="<?= $userIP ?>"></label>
         <input type="submit" value="Validate">
@@ -54,8 +53,7 @@ Please enter IP above
 
 <div class="test-api-wrap">
     <h2>Test the API:</h2>
-    <!-- <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/geoApi"> -->
-    <form method="POST" action="http://localhost:8080/dbwebb/ramverk1/me/redovisa/htdocs/geoApi">
+    <form method="POST" action="http://www.student.bth.se/~magm19/dbwebb-kurser/ramverk1/me/redovisa/htdocs/geoApi">
         Valid ip:<input type="submit" value="194.47.150.9" name="ip"><br>
         Invalid ip: <input type="submit" value="000000" name="ip">
     </form>
@@ -87,4 +85,3 @@ Please enter IP above
     "Longitude": 15.586899757385254
 }</pre>
 </div>
-

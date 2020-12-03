@@ -52,7 +52,7 @@ class GeoApiController implements ContainerInjectableInterface
 
 
     /**
-     * This is the post method action
+     * post
      *
      * @return array
      */
@@ -65,16 +65,15 @@ class GeoApiController implements ContainerInjectableInterface
         }
 
         if ($this->di->request->getPost('ip')) {
-            $ip = $this->di->request->getPost('ip');
+            $ipAddr = $this->di->request->getPost('ip');
         } else if ($body['ip']) {
-            $ip = $body['ip'];
+            $ipAddr = $body['ip'];
         }
 
         $model = new GeoModel(ANAX_INSTALL_PATH."/config/api/ipstack.txt");
-        // $ip = $this->di->request->getPost('ip') ?? "";
 
-        if($model->validateIp($ip)) {
-            $model->getDataFromApi($ip);
+        if ($model->validateIp($ipAddr)) {
+            $model->getDataFromApi($ipAddr);
             $res = $model->getData();
             $json = [
                 "IP" => $res->ip,
